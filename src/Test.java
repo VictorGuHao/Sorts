@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Test
 {
     public static void main(String[] arr)
@@ -34,6 +36,26 @@ public class Test
         System.out.println();
         Sorts.decendingSort(testNames);
         for (String num : testNames)
+        {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        ArrayList<String> testNameArr = new ArrayList<>();
+        for (String name : testNames)
+            testNameArr.add(name);
+        System.out.println(testNameArr);
+        Sorts.ascendingSort(testNameArr);
+        System.out.println(testNameArr);
+        System.out.println(Sorts.removeLongString(5, testNameArr));
+        System.out.println(testNameArr);
+        int[] testarr2 = {101,190,21,301,501,4140,1821,152,10,846,11};
+        for (int num : testarr2)
+        {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+        Sorts.insertionSort(testarr2);
+        for (int num : testarr2)
         {
             System.out.print(num + " ");
         }

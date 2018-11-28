@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Sorts
 {
@@ -84,5 +85,34 @@ public class Sorts
         String temp = arr[index1];
         arr[index1] = arr[index2];
         arr[index2] = temp;
+    }
+
+    public static ArrayList<String> removeLongString(int maxLen, List<String> arr)
+    {
+        ArrayList<String> rmedItem = new ArrayList<String>();
+        int i = 0;
+        while (i < arr.size())
+        {
+            if(arr.get(i).length() > maxLen)
+                rmedItem.add(arr.remove(i));
+            else
+                i++;
+        }
+        return rmedItem;
+    }
+
+    public static void insertionSort(int[] elements)
+    {
+        for (int j = 1; j < elements.length; j++)
+        {
+            int temp = elements[j];
+            int possibleIndex = j;
+            while (possibleIndex > 0 && temp < elements[possibleIndex - 1])
+            {
+                elements[possibleIndex] = elements[possibleIndex - 1];
+                possibleIndex--;
+            }
+            elements[possibleIndex] = temp;
+        }
     }
 }
