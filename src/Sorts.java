@@ -115,4 +115,25 @@ public class Sorts
             elements[possibleIndex] = temp;
         }
     }
+
+    public static int getRandomNum(int maxLen)
+    {
+        return (int)(Math.random() * Math.pow(10, maxLen));
+    }
+
+    public static int[] arrayBuild(int arrLen)
+    {
+        int[] arr = new int[arrLen];
+        for (int i = 0; i < arr.length; i++)
+            arr[i] = getRandomNum(6);
+        return arr;
+    }
+
+    public static int[] copyIntArr(int[] arr)
+    {
+        int[] copiedArr = new int[arr.length];
+        for (int i = 0; i < copiedArr.length; i++)
+            copiedArr[i] = arr[i];
+        return copiedArr;
+    }
 }

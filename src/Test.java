@@ -60,5 +60,33 @@ public class Test
             System.out.print(num + " ");
         }
         System.out.println();
+        int[] timetestarr1 = Sorts.arrayBuild(100000);
+        //int[] timetestarr2 = Sorts.copyIntArr(timetestarr1);
+        int[] timetestarr2 = timetestarr1.clone();
+
+        long start1 = System.currentTimeMillis();
+        Sorts.ascendingSort(timetestarr1);
+        long end1 = System.currentTimeMillis();
+        long unsorted1 = end1 - start1;
+        System.out.println("Selection Unsorted: " + unsorted1);
+
+        long start1a = System.currentTimeMillis();
+        Sorts.ascendingSort(timetestarr1);
+        long end1a = System.currentTimeMillis();
+        long sorted1 = end1a - start1a;
+        System.out.println("Selection sorted: " + sorted1);
+
+        long start2 = System.currentTimeMillis();
+        Sorts.insertionSort(timetestarr2);
+        long end2 = System.currentTimeMillis();
+        long unsorted2 = end2 - start2;
+        System.out.println("Insertion unsorted: " + unsorted2);
+
+        long start2a = System.currentTimeMillis();
+        Sorts.insertionSort(timetestarr2);
+        long end2a = System.currentTimeMillis();
+        long sorted2 = end2a - start2a;
+        System.out.println("Insertion sorted: " + sorted2);
+
     }
 }
