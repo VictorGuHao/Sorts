@@ -88,5 +88,11 @@ public class Test
         long sorted2 = end2a - start2a;
         System.out.println("Insertion sorted: " + sorted2);
 
+        int[] mergeTest = Sorts.arrayBuild(100000);
+        long start3a = System.currentTimeMillis();
+        Sorts.mergeSort(mergeTest);
+        long start3b = System.currentTimeMillis();
+        long unsorted3 = start3b - start3a;
+        System.out.println("Merge sorted " + unsorted3);
     }
 }
